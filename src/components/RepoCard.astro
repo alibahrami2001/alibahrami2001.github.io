@@ -12,7 +12,7 @@ function getLanguageColor(language) {
     'C++': 'bg-purple-500',
     HTML: 'bg-orange-500',
     CSS: 'bg-pink-500',
-    default: 'bg-slate-400'
+    default: 'bg-gray-400'
   };
   return colors[language] || colors.default;
 }
@@ -22,18 +22,18 @@ function getLanguageColor(language) {
   href={repo.html_url}
   target="_blank"
   rel="noopener noreferrer"
-  class="group block p-6 bg-slate-800/50 rounded-xl transition-all duration-300 border border-slate-700/50 hover:border-indigo-500/50 hover:shadow-lg hover:shadow-indigo-500/10 backdrop-blur-sm"
+  class="group block p-6 bg-gray-800/50 rounded-xl transition-all duration-300 border border-gray-700/50 hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/10 backdrop-blur-sm"
 >
   <div class="flex items-start justify-between">
-    <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-indigo-400 transition-colors">
+    <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors">
       {repo.name}
     </h3>
     <div class="flex items-center space-x-3">
-      <span class="flex items-center text-slate-400 text-sm">
+      <span class="flex items-center text-gray-400 text-sm">
         <span class="mr-1">★</span>
         {repo.stargazers_count}
       </span>
-      <span class="flex items-center text-slate-400 text-sm">
+      <span class="flex items-center text-gray-400 text-sm">
         <span class="mr-1">⑂</span>
         {repo.forks_count}
       </span>
@@ -41,17 +41,17 @@ function getLanguageColor(language) {
   </div>
   
   {repo.description && (
-    <p class="text-slate-400 mb-4 line-clamp-2 text-sm">{repo.description}</p>
+    <p class="text-gray-400 mb-4 line-clamp-2 text-sm">{repo.description}</p>
   )}
   
   <div class="flex items-center space-x-4 mt-4">
     {repo.language && (
       <div class="flex items-center">
         <span class={`w-2 h-2 rounded-full ${getLanguageColor(repo.language)} mr-2`}></span>
-        <span class="text-slate-400 text-sm">{repo.language}</span>
+        <span class="text-gray-400 text-sm">{repo.language}</span>
       </div>
     )}
-    <span class="text-slate-500 text-sm">
+    <span class="text-gray-500 text-sm">
       Updated {format(new Date(repo.updated_at), 'MMM d, yyyy')}
     </span>
   </div>
