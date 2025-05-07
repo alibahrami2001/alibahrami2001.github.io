@@ -10,7 +10,7 @@ const { title } = Astro.props;
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Ali Bahrami's GitHub Portfolio" />
+    <meta name="description" content="Ali Bahrami's GitHub Portfolio - Software Developer & Open Source Enthusiast" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
@@ -18,8 +18,9 @@ const { title } = Astro.props;
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="theme-color" content="#1e1b4b" />
   </head>
-  <body class="bg-[#0a0b0f] min-h-screen">
+  <body class="bg-slate-950 min-h-screen antialiased">
     <slot />
   </body>
 </html>
@@ -30,6 +31,7 @@ const { title } = Astro.props;
   }
   html {
     font-family: 'Inter', system-ui, sans-serif;
+    scroll-behavior: smooth;
   }
   code {
     font-family:
